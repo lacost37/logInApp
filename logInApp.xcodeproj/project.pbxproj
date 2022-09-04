@@ -13,6 +13,8 @@
 		0495E95528C4C56300DD3CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495E95328C4C56300DD3CFF /* Main.storyboard */; };
 		0495E95728C4C56600DD3CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0495E95628C4C56600DD3CFF /* Assets.xcassets */; };
 		0495E95A28C4C56600DD3CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495E95828C4C56600DD3CFF /* LaunchScreen.storyboard */; };
+		0495E96828C4CB7600DD3CFF /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495E96728C4CB7600DD3CFF /* welcomeViewController.swift */; };
+		0495E96A28C4DDD000DD3CFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495E96928C4DDD000DD3CFF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0495E95628C4C56600DD3CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0495E95928C4C56600DD3CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0495E95B28C4C56600DD3CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0495E96728C4CB7600DD3CFF /* welcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
+		0495E96928C4DDD000DD3CFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		0495E94128C4C56300DD3CFF = {
 			isa = PBXGroup;
 			children = (
+				0495E96428C4C9E300DD3CFF /* Models */,
 				0495E94C28C4C56300DD3CFF /* logInApp */,
 				0495E94B28C4C56300DD3CFF /* Products */,
 			);
@@ -56,15 +61,48 @@
 		0495E94C28C4C56300DD3CFF /* logInApp */ = {
 			isa = PBXGroup;
 			children = (
-				0495E94D28C4C56300DD3CFF /* AppDelegate.swift */,
-				0495E94F28C4C56300DD3CFF /* SceneDelegate.swift */,
-				0495E95128C4C56300DD3CFF /* ViewController.swift */,
-				0495E95328C4C56300DD3CFF /* Main.storyboard */,
+				0495E96228C4C5B200DD3CFF /* Supporting files */,
+				0495E96328C4C5CC00DD3CFF /* View controllers */,
+				0495E96128C4C58E00DD3CFF /* Storyboards */,
 				0495E95628C4C56600DD3CFF /* Assets.xcassets */,
-				0495E95828C4C56600DD3CFF /* LaunchScreen.storyboard */,
 				0495E95B28C4C56600DD3CFF /* Info.plist */,
 			);
 			path = logInApp;
+			sourceTree = "<group>";
+		};
+		0495E96128C4C58E00DD3CFF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0495E95328C4C56300DD3CFF /* Main.storyboard */,
+				0495E95828C4C56600DD3CFF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0495E96228C4C5B200DD3CFF /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				0495E94D28C4C56300DD3CFF /* AppDelegate.swift */,
+				0495E94F28C4C56300DD3CFF /* SceneDelegate.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		0495E96328C4C5CC00DD3CFF /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0495E95128C4C56300DD3CFF /* ViewController.swift */,
+				0495E96728C4CB7600DD3CFF /* welcomeViewController.swift */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		0495E96428C4C9E300DD3CFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0495E96928C4DDD000DD3CFF /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0495E95228C4C56300DD3CFF /* ViewController.swift in Sources */,
+				0495E96828C4CB7600DD3CFF /* welcomeViewController.swift in Sources */,
 				0495E94E28C4C56300DD3CFF /* AppDelegate.swift in Sources */,
+				0495E96A28C4DDD000DD3CFF /* User.swift in Sources */,
 				0495E95028C4C56300DD3CFF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +344,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +372,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
