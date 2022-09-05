@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="30" y="54"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Профиль-->
         <scene sceneID="d6u-SP-QbU">
             <objects>
                 <viewController id="h7N-cV-LfJ" customClass="WelcomeViewController" customModule="logInApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,15 +120,6 @@
                                     <action selector="logOutButtonAction" destination="h7N-cV-LfJ" eventType="touchUpInside" id="GKm-hz-De9"/>
                                 </connections>
                             </button>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EZr-WX-P71">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="ffH-5J-bub"/>
-                                    <tabBarItem systemItem="more" id="b7q-1G-80I"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mfs-0c-rOn"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,11 +131,12 @@
                             <constraint firstItem="Mfs-0c-rOn" firstAttribute="trailing" secondItem="Ncn-eX-Bt3" secondAttribute="trailing" constant="72" id="wj0-5q-L0G"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.circle" catalog="system" selectedImage="person.circle" id="e5m-bA-fd0"/>
                     <navigationItem key="navigationItem" id="co7-ID-tzM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRr-RE-QPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585" y="54"/>
+            <point key="canvasLocation" x="2524" y="53.523238380809602"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VGq-8h-KfO">
@@ -159,15 +152,96 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="h7N-cV-LfJ" kind="relationship" relationship="rootViewController" id="cgQ-2b-7sp"/>
+                        <segue destination="UIQ-D3-PDt" kind="relationship" relationship="rootViewController" id="cgQ-2b-7sp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZV-zl-LqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="804" y="54"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vMc-Gx-ylz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UIQ-D3-PDt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YIa-Zv-3kZ"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oa0-ze-UoI">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="h7N-cV-LfJ" kind="relationship" relationship="viewControllers" id="l0p-Wt-I2q"/>
+                        <segue destination="B6R-TW-7O5" kind="relationship" relationship="viewControllers" id="ns7-Vo-BR8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRj-cw-FVv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584.8" y="53.523238380809602"/>
+        </scene>
+        <!--Награды-->
+        <scene sceneID="2vm-LT-C45">
+            <objects>
+                <viewController id="B6R-TW-7O5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JoJ-4E-SKV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="A4K-8U-leA">
+                                <rect key="frame" x="92" y="79" width="191.5" height="460"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Награда 🏋️‍♀️" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gf-0i-x3s">
+                                        <rect key="frame" x="0.0" y="0.0" width="191.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Награда 🪂" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hch-sk-oGs">
+                                        <rect key="frame" x="0.0" y="106" width="191.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Награда 🏂" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez7-Zk-cEy">
+                                        <rect key="frame" x="0.0" y="212" width="191.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. Награда 🏊‍♀️" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHm-vD-wUh">
+                                        <rect key="frame" x="0.0" y="318" width="191.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5. Награда 🚴‍♀️" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHA-9w-xk6">
+                                        <rect key="frame" x="0.0" y="424" width="191.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fs6-FU-MDO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fs6-FU-MDO" firstAttribute="trailing" secondItem="A4K-8U-leA" secondAttribute="trailing" constant="91.5" id="4Ic-Ll-YqH"/>
+                            <constraint firstItem="A4K-8U-leA" firstAttribute="leading" secondItem="fs6-FU-MDO" secondAttribute="leading" constant="92" id="4tF-x1-xyL"/>
+                            <constraint firstItem="A4K-8U-leA" firstAttribute="top" secondItem="fs6-FU-MDO" secondAttribute="top" constant="35" id="b57-0L-rgd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Награды" image="rosette" catalog="system" id="CS4-ax-exS">
+                        <imageReference key="selectedImage" image="rosette" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKt-pL-bTE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="791"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="rosette" catalog="system" width="106" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

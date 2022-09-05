@@ -24,7 +24,7 @@ class WelcomeViewController: UIViewController {
             
             let gradientLayer = CAGradientLayer()
             gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [
+            gradientLayer.colors = [
             UIColor.systemPink.cgColor,
             UIColor.systemOrange.cgColor,
         ]
